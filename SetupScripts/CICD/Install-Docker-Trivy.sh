@@ -11,8 +11,10 @@ echo
 echo "Docker is Installed"
 
 echo
-echo "Fetching sonarqube image from Dockerhub"
-sudo docker pull sonarqube:lts-community
+echo "Running SonarQube in Docker Container"
+docker run -d -n sonar -p 9000:9000 sonarqube:lts-community
+echo 
+echo "SonarQube container is running"
 
 echo
 echo "Installing Trivy..."
